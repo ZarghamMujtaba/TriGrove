@@ -64,7 +64,7 @@ title: Approach
 <h3>Want a recommendation?</h3>
 <p>We'll propose a first engagement and advisor mix.</p>
 </div>
-<button class="btn-consult-cta">Request a consult</button>
+<a href="{{ '/contact/' | url }}" class="btn-consult-cta">Request a consult</a>
 </div>
 </div>
 </section>

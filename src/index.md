@@ -19,17 +19,17 @@ title: Home
             <div class="card">
                 <h3>Assessments & roadmaps</h3>
                 <p>Know where you stand and what to do next. Prioritized and scoped to your team.</p>
-                <a href="/services/#assessments" class="card-link">View details &rarr;</a>
+                <a href="{{ '/services/#assessments' | url }}" class="card-link">View details &rarr;</a>
             </div>
             <div class="card">
                 <h3>GRC / audit readiness</h3>
                 <p>Evidence planning and control alignment for SOC 2, ISO 27001, and customer assurance.</p>
-                <a href="/services/#grc" class="card-link">View details &rarr;</a>
+                <a href="{{ '/services/#grc' | url }}" class="card-link">View details &rarr;</a>
             </div>
             <div class="card">
                 <h3>Operations advisory</h3>
                 <p>Bookkeeping workflow, close cadence, AP/AR support, and management reporting.</p>
-                <a href="/services/#operations-advisory" class="card-link">View details &rarr;</a>
+                <a href="{{ '/services/#operations-advisory' | url }}" class="card-link">View details &rarr;</a>
             </div>
         </div>
     </div>
@@ -62,7 +62,7 @@ title: Home
                 <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem; font-weight: 700;">Not sure where to start?</h3>
                 <p style="color: var(--text-muted); font-size: 0.9rem;">We'll recommend a first engagement that fits your timelines.</p>
             </div>
-            <a href="/contact/" class="btn btn-primary">Request a consult</a>
+            <a href="{{ '/contact/' | url }}" class="btn btn-primary">Request a consult</a>
         </div>
     </div>
 </section>
@@ -86,7 +86,7 @@ title: Home
                         <span class="tag">SOC2</span>
                         <span class="tag">ISO</span>
                     </div>
-                    <a href="/advisors/" class="card-link" style="margin-top: 0.5rem; font-size: 0.8rem;">Meet advisors</a>
+                    <a href="{{ '/advisors/' | url }}" class="card-link" style="margin-top: 0.5rem; font-size: 0.8rem;">Meet advisors</a>
                  </div>
             </div>
              <div class="card" style="display: flex; gap: 1rem; align-items: start;">

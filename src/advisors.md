@@ -43,7 +43,7 @@ title: Advisors
 <div class="tags">
 {% for tag in advisor.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
 </div>
-<button class="btn-consult">Request consult</button>
+<a href="{{ '/contact/' | url }}" class="btn-consult">Request consult</a>
 <a href="{{ advisor.related_services_link }}" class="related-services">Related services</a>
 </div>
 {% endfor %}
@@ -55,7 +55,7 @@ title: Advisors
 <h2>Need a specific specialty?</h2>
 <p>Describe your situation and we'll match the right advisor(s).</p>
 </div>
-<button class="btn-consult-cta">Request a consult</button>
+<a href="{{ '/contact/' | url }}" class="btn-consult-cta">Request a consult</a>
 </div>
   </div>
 </section>

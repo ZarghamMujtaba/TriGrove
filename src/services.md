@@ -16,8 +16,8 @@ title: Services
                 Choose a starting point. Most clients begin with an assessment or advisory retainer.
             </p>
             <div style="display: flex; gap: 0.75rem; align-items: center;">
-                <a href="/contact/" class="btn btn-primary btn-sm">Request a consult</a>
-                <a href="/advisors/" class="btn btn-outline btn-sm">Meet advisors</a>
+                <a href="{{ '/contact/' | url }}" class="btn btn-primary btn-sm">Request a consult</a>
+
             </div>
             <div class="tag-pills">
                  <a href="#assessments" class="tag-pill">Assessments</a>
@@ -48,7 +48,7 @@ title: Services
                         <li>Executive-ready brief deck</li>
                     </ul>
                     <div style="margin-top: auto;">
-                        <a href="/contact/?topic=Security%20Assessment" class="btn btn-primary btn-sm">Discuss this service</a>
+                        <a href="{{ '/contact/?topic=Security%20Assessment' | url }}" class="btn btn-primary btn-sm">Discuss this service</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -62,7 +62,7 @@ title: Services
                         <li>Implementation sequencing</li>
                     </ul>
                     <div style="margin-top: auto;">
-                         <a href="/contact/?topic=Architecture%20Review" class="btn btn-primary btn-sm">Discuss this service</a>
+                         <a href="{{ '/contact/?topic=Architecture%20Review' | url }}" class="btn btn-primary btn-sm">Discuss this service</a>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@ title: Services
                         <li>Pre-audit readiness review</li>
                     </ul>
                     <div style="margin-top: auto;">
-                        <a href="/contact/?topic=SOC%202%20Readiness" class="btn btn-primary btn-sm">Discuss</a>
+                        <a href="{{ '/contact/?topic=SOC%202%20Readiness' | url }}" class="btn btn-primary btn-sm">Discuss</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -102,7 +102,7 @@ title: Services
                         <li>Internal audit prep support</li>
                     </ul>
                     <div style="margin-top: auto;">
-                         <a href="/contact/?topic=ISO%2027001" class="btn btn-primary btn-sm">Discuss</a>
+                         <a href="{{ '/contact/?topic=ISO%2027001' | url }}" class="btn btn-primary btn-sm">Discuss</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -116,7 +116,7 @@ title: Services
                         <li>Monthly reporting cadence</li>
                     </ul>
                     <div style="margin-top: auto;">
-                         <a href="/contact/?topic=Security%20Metrics" class="btn btn-primary btn-sm">Discuss</a>
+                         <a href="{{ '/contact/?topic=Security%20Metrics' | url }}" class="btn btn-primary btn-sm">Discuss</a>
                     </div>
                 </div>
             </div>
@@ -142,7 +142,7 @@ title: Services
                         <li>After action plan</li>
                     </ul>
                     <div style="margin-top: auto;">
-                        <a href="/contact/?topic=Incident%20Response" class="btn btn-primary btn-sm">Discuss</a>
+                        <a href="{{ '/contact/?topic=Incident%20Response' | url }}" class="btn btn-primary btn-sm">Discuss</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -156,7 +156,7 @@ title: Services
                         <li>Risk reduction recommendations</li>
                     </ul>
                     <div style="margin-top: auto;">
-                         <a href="/contact/?topic=Recovery%20Readiness" class="btn btn-primary btn-sm">Discuss</a>
+                         <a href="{{ '/contact/?topic=Recovery%20Readiness' | url }}" class="btn btn-primary btn-sm">Discuss</a>
                     </div>
                 </div>
             </div>
@@ -182,7 +182,7 @@ title: Services
                         <li>Advisor matching as needed</li>
                     </ul>
                     <div style="margin-top: auto;">
-                        <a href="/contact/?topic=vCISO%20Retainer" class="btn btn-primary btn-sm">Discuss</a>
+                        <a href="{{ '/contact/?topic=vCISO%20Retainer' | url }}" class="btn btn-primary btn-sm">Discuss</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -196,7 +196,7 @@ title: Services
                         <li>Program design + cadence</li>
                     </ul>
                     <div style="margin-top: auto;">
-                         <a href="/contact/?topic=Vendor%20Risk" class="btn btn-primary btn-sm">Discuss</a>
+                         <a href="{{ '/contact/?topic=Vendor%20Risk' | url }}" class="btn btn-primary btn-sm">Discuss</a>
                     </div>
                 </div>
             </div>
@@ -223,7 +223,7 @@ title: Services
                         <li>Categorization guidelines + documentation standards</li>
                     </ul>
                     <div style="margin-top: auto;">
-                        <a href="/contact/?topic=Bookkeeping%20Oversight" class="btn btn-primary btn-sm">Discuss</a>
+                        <a href="{{ '/contact/?topic=Bookkeeping%20Oversight' | url }}" class="btn btn-primary btn-sm">Discuss</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -237,7 +237,7 @@ title: Services
                         <li>Aging summaries and status reporting</li>
                     </ul>
                     <div style="margin-top: auto;">
-                         <a href="/contact/?topic=AP/AR%20Process" class="btn btn-primary btn-sm">Discuss</a>
+                         <a href="{{ '/contact/?topic=AP/AR%20Process' | url }}" class="btn btn-primary btn-sm">Discuss</a>
                     </div>
                 </div>
                  <div class="service-card">
@@ -251,7 +251,7 @@ title: Services
                         <li>Variance notes and decision support</li>
                     </ul>
                     <div style="margin-top: auto;">
-                         <a href="/contact/?topic=Management%20Reporting" class="btn btn-primary btn-sm">Discuss</a>
+                         <a href="{{ '/contact/?topic=Management%20Reporting' | url }}" class="btn btn-primary btn-sm">Discuss</a>
                     </div>
                 </div>
             </div>
@@ -272,7 +272,7 @@ title: Services
                 <h3 style="font-weight: 700; font-size: 1rem; color: var(--color-slate-900); margin-bottom: 0.25rem;">Want monthly financials you can trust?</h3>
                 <p style="font-size: 0.9rem; color: var(--color-slate-600);">We'll help you build a repeatable close process and reporting cadence.</p>
             </div>
-            <a href="/contact/?topic=Operations%20Advisory" class="btn btn-primary btn-sm">Request a consult</a>
+            <a href="{{ '/contact/?topic=Operations%20Advisory' | url }}" class="btn btn-primary btn-sm">Request a consult</a>
         </div>
     </div>
 </section>
