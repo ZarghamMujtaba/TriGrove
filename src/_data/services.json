@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Security assessment + roadmap",
+    "description": "Comprehensive security analysis and strategic planning.",
+    "icon": "shield-check",
+    "featured": true,
+    "category": "Assessments/Roadmaps"
+  },
+  {
+    "title": "SOC 2/ISO readiness",
+    "description": "Prepare your organization for compliance certifications.",
+    "icon": "clipboard-check",
+    "featured": true,
+    "category": "GRC/Audit readiness"
+  },
+  {
+    "title": "Operations advisory",
+    "description": "Strategic operational improvements and efficiency.",
+    "icon": "chart-bar",
+    "featured": true,
+    "category": "Operations advisory"
+  }
+]

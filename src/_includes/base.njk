@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title | default(site.name) }}</title>
+    <meta name="description" content="{{ description | default(site.description) }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    
+    <!-- OpenGraph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ title | default(site.name) }}">
+    <meta property="og:description" content="{{ description | default(site.description) }}">
+    <meta property="og:image" content="{{ site.url }}/assets/logo-mark.svg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+    <meta name="twitter:title" content="{{ title | default(site.name) }}">
+    <meta name="twitter:description" content="{{ description | default(site.description) }}">
+    <meta name="twitter:image" content="{{ site.url }}/assets/logo-mark.svg">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    {% include "header.njk" %}
+    
+    <main>
+        {{ content | safe }}
+    </main>
+
+    {% include "footer.njk" %}
+</body>
+</html>

@@ -1,0 +1,63 @@
+[
+  {
+    "initials": "AR",
+    "name": "Advisor (Sample)",
+    "specialty_line": "GRC • SOC 2 • ISO 27001",
+    "bio": "Senior compliance and controls advisor focused on evidence-ready programs.",
+    "tags": [
+      "GRC",
+      "SOC2",
+      "ISO"
+    ],
+    "filter_category": "grc",
+    "related_services_link": "/services/#grc"
+  },
+  {
+    "initials": "CS",
+    "name": "Advisor (Sample)",
+    "specialty_line": "Cloud • Architecture • IAM",
+    "bio": "Cloud security architecture reviews with practical sequencing for teams.",
+    "tags": [
+      "Cloud",
+      "Architecture"
+    ],
+    "filter_category": "security",
+    "related_services_link": "/services/#assessments"
+  },
+  {
+    "initials": "IR",
+    "name": "Advisor (Sample)",
+    "specialty_line": "Incident Response • Tabletop • Recovery",
+    "bio": "Incident readiness exercises and recovery validation for high-impact scenarios.",
+    "tags": [
+      "IR",
+      "Tabletop"
+    ],
+    "filter_category": "incident",
+    "related_services_link": "/services/#incident-readiness"
+  },
+  {
+    "initials": "VR",
+    "name": "Advisor (Sample)",
+    "specialty_line": "Vendor Risk • TPRM • Due diligence",
+    "bio": "Third party risk program design and vendor review support.",
+    "tags": [
+      "VendorRisk",
+      "TPRM"
+    ],
+    "filter_category": "grc",
+    "related_services_link": "/services/#strategic-advisory"
+  },
+  {
+    "initials": "OP",
+    "name": "Advisor (Sample)",
+    "specialty_line": "Operations • Reporting • Process",
+    "bio": "Operational cadence and reporting support for small teams (close, AP/AR, KPIs).",
+    "tags": [
+      "Ops",
+      "Reporting"
+    ],
+    "filter_category": "operations",
+    "related_services_link": "/services/#operations-advisory"
+  }
+]
