@@ -4,7 +4,7 @@ title: Advisors
 ---
 
 <!-- Watermark Logo -->
-<img src="/assets/logo-mark.svg" class="bg-logo-watermark" alt="" aria-hidden="true">
+<img src="{{ '/assets/logo-mark.svg' | url }}" class="bg-logo-watermark" alt="" aria-hidden="true">
 
 <!-- Advisors Page Content -->
 <section class="advisors-section">

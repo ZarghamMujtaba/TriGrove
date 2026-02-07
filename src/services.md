@@ -4,7 +4,7 @@ title: Services
 ---
 
 <!-- Watermark Logo -->
-<img src="/assets/logo-mark.svg" class="bg-logo-watermark" alt="" aria-hidden="true">
+<img src="{{ '/assets/logo-mark.svg' | url }}" class="bg-logo-watermark" alt="" aria-hidden="true">
 
 <!-- Header (White) -->
 <section class="section-white">

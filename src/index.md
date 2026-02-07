@@ -5,7 +5,7 @@ title: Home
 
 {% include "hero.njk" %}
 
-<img src="/assets/logo-mark.svg" class="bg-logo-watermark" alt="" aria-hidden="true">
+<img src="{{ '/assets/logo-mark.svg' | url }}" class="bg-logo-watermark" alt="" aria-hidden="true">
 
 <!-- Features Section (Light) -->
 <section class="section-light">
