@@ -4,6 +4,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/robots.txt");
 
     return {
+        pathPrefix: "/TriGrove/",
         markdownTemplateEngine: "njk",
         htmlTemplateEngine: "njk",
         dataTemplateEngine: "njk",
