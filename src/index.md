@@ -16,21 +16,14 @@ title: Home
         </div>
 
         <div class="grid grid-3">
+{%- set featuredCategories = [services.categories[0], services.categories[1], services.categories[4]] -%}
+{%- for category in featuredCategories -%}
             <div class="card">
-                <h3>Assessments & roadmaps</h3>
-                <p>Know where you stand and what to do next. Prioritized and scoped to your team.</p>
-                <a href="{{ '/services/#assessments' | url }}" class="card-link">View details &rarr;</a>
+                <h3>{{ category.homepage_title | default(category.title) }}</h3>
+                <p>{{ category.homepage_description | default(category.description) }}</p>
+                <a href="{{ ('/services/#' + category.id) | url }}" class="card-link">View details &rarr;</a>
             </div>
-            <div class="card">
-                <h3>GRC / audit readiness</h3>
-                <p>Evidence planning and control alignment for SOC 2, ISO 27001, and customer assurance.</p>
-                <a href="{{ '/services/#grc' | url }}" class="card-link">View details &rarr;</a>
-            </div>
-            <div class="card">
-                <h3>Operations advisory</h3>
-                <p>Bookkeeping workflow, close cadence, AP/AR support, and management reporting.</p>
-                <a href="{{ '/services/#operations-advisory' | url }}" class="card-link">View details &rarr;</a>
-            </div>
+{%- endfor -%}
         </div>
     </div>
 </section>
@@ -98,7 +91,7 @@ title: Home
                         <span class="tag">Cloud</span>
                         <span class="tag">Architecture</span>
                     </div>
-                    <a href="/advisors/" class="card-link" style="margin-top: 0.5rem; font-size: 0.8rem;">Meet advisors</a>
+                    <a href="{{ '/advisors/' | url }}" class="card-link" style="margin-top: 0.5rem; font-size: 0.8rem;">Meet advisors</a>
                  </div>
             </div>
              <div class="card" style="display: flex; gap: 1rem; align-items: start;">
@@ -110,7 +103,7 @@ title: Home
                         <span class="tag">Ops</span>
                         <span class="tag">Reporting</span>
                     </div>
-                    <a href="/advisors/" class="card-link" style="margin-top: 0.5rem; font-size: 0.8rem;">Meet advisors</a>
+                    <a href="{{ '/advisors/' | url }}" class="card-link" style="margin-top: 0.5rem; font-size: 0.8rem;">Meet advisors</a>
                  </div>
             </div>
         </div>

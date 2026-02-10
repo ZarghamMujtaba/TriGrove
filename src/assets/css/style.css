@@ -73,6 +73,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--bg-body);
   color: var(--text-main);
@@ -217,7 +221,13 @@ img {
 }
 
 .grid-2 {
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 .text-center {
@@ -532,6 +542,7 @@ img {
 .mini-card:hover {
   border-color: var(--color-brand-primary);
   transform: translateX(4px);
+  cursor: pointer;
 }
 
 .mini-card h3 {

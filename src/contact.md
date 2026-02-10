@@ -46,17 +46,15 @@ title: Contact
                             <label for="email" class="form-label">Email</label>
                             <input type="email" id="email" name="_replyto" class="form-input" required>
                         </div>
-                        <!-- Topic Dropdown -->
                         <div class="form-group">
                             <label for="topic" class="form-label">What do you need help with?</label>
                             <select id="topic" name="topic" class="form-input">
                                 <option value="">Select one...</option>
-                                <option value="Security Assessment">Security Assessment + Roadmap</option>
-                                <option value="SOC 2 Readiness">SOC 2 / ISO readiness support</option>
-                                <option value="Vendor Risk">Vendor risk program (TPRM)</option>
-                                <option value="vCISO Support">vCISO monthly support</option>
-                                <option value="Incident Response">Incident response planning</option>
-                                <option value="Operations Advisory">Operations advisory</option>
+{%- for category in services.categories -%}
+{%- for service in category.services %}
+                                <option value="{{ service.contact_topic }}">{{ service.title }}</option>
+{%- endfor -%}
+{%- endfor %}
                                 <option value="Other">Other / Not sure</option>
                             </select>
                         </div>

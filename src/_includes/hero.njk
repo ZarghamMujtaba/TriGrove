@@ -4,7 +4,7 @@
   background-color: var(--color-slate-950);
   color: white;
   padding: 2rem;
-  min-height: 100vh;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -121,7 +121,7 @@
         <div class="hero-content">
             <div class="hero-text">
                 <div class="animate-entry" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem; opacity: 0.9;">
-                    <img src="{{ '/assets/logo-mark.svg' | url }}" alt="TriGrove Logo" style="width: 32px; height: auto;">
+                    <img src="{{ '/assets/logo-light.png' | url }}" alt="TriGrove Logo" style="width: auto; height: 40px;">
                     <span style="text-transform: uppercase; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; color: #94a3b8;">Advisory Consulting</span>
                 </div>
 
@@ -152,20 +152,26 @@
             <div class="hero-card-stack animate-entry delay-5">
                 <h2 style="color: var(--color-brand-hover);">Popular starting points</h2>
                 
-                <div class="mini-card">
-                    <h3>Security assessment + roadmap</h3>
-                    <p>Baseline posture and align priorities with clear ownership and sequencing.</p>
-                </div>
+                <a href="{{ '/services/#assessments' | url }}" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="mini-card">
+                        <h3>Security assessment + roadmap</h3>
+                        <p>Baseline posture and align priorities with clear ownership and sequencing.</p>
+                    </div>
+                </a>
                 
-                <div class="mini-card">
-                    <h3>SOC 2 / ISO readiness</h3>
-                    <p>Controls, evidence plan, and timeline to reduce audit surprises.</p>
-                </div>
+                <a href="{{ '/services/#grc' | url }}" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="mini-card">
+                        <h3>SOC 2 / ISO readiness</h3>
+                        <p>Controls, evidence plan, and timeline to reduce audit surprises.</p>
+                    </div>
+                </a>
 
-                <div class="mini-card">
-                    <h3>Operations advisory</h3>
-                    <p>Bookkeeping oversight, close process, and management reporting cadence.</p>
-                </div>
+                <a href="{{ '/services/#operations-advisory' | url }}" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="mini-card">
+                        <h3>Operations advisory</h3>
+                        <p>Bookkeeping oversight, close process, and management reporting cadence.</p>
+                    </div>
+                </a>
 
                 <div style="margin-top: 1.5rem; text-align: center;">
                     <span style="display: inline-block; background-color: #e2e8f0; padding: 0.35rem 1rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #475569;">
