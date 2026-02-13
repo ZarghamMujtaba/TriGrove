@@ -1088,11 +1088,23 @@ select.form-input {
   .bg-logo-watermark {
     opacity: 0.1;
     width: 80vw;
-    right: -20vw;
+    right: -10vw;
   }
 }
 
 @media (max-width: 480px) {
+
+  /* Sticky Header */
+  .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    width: 100% !important;
+    background-color: rgba(248, 250, 252, 0.98) !important;
+    /* Slightly more opaque for readability over content */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow for separation */
+  }
 
   /* Typography */
   .headingText {
