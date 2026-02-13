@@ -15,7 +15,7 @@ title: Services
             <p style="color: var(--text-muted); margin-bottom: 1.5rem; max-width: 600px;">
                 Choose a starting point. Most clients begin with an assessment or advisory retainer.
             </p>
-            <div style="display: flex; gap: 0.75rem; align-items: center;">
+            <div class="service-cta-button" style="gap: 0.75rem;">
                 <a href="{{ '/contact/' | url }}" class="btn btn-primary btn-sm">Request a consult</a>
 
             </div>

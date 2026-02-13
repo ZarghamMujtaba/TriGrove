@@ -10,7 +10,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  z-index: 10;
+  z-index: 1;
 }
 
 /* Decorative background elements */
@@ -43,16 +43,7 @@
   flex: 0.7;
 }
 
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
-    gap: 3rem;
-  }
-  .hero-text, .hero-card-stack {
-    width: 100%;
-    flex: auto;
-  }
-}
+
 
 .hero-text h1 {
   font-size: 2.8rem;
@@ -120,15 +111,15 @@
     <div class="container">
         <div class="hero-content">
             <div class="hero-text">
-                <div class="animate-entry" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem; opacity: 0.9;">
+                <div class="hero-logo-row animate-entry" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem; opacity: 0.9;">
                     <img src="{{ '/assets/logo-light.png' | url }}" alt="TriGrove Logo" style="width: auto; height: 40px;">
                     <span style="text-transform: uppercase; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; color: #94a3b8;">Advisory Consulting</span>
                 </div>
 
-                <h1 class="animate-entry delay-1">Senior advisory support for security and operations—built to be implemented.</h1>
-                <p class="animate-entry delay-2">TriGrove provides practical cybersecurity advisory and operations guidance. Engage a curated network of independent specialists for outcome-driven work: roadmaps, readiness, reporting, and execution support.</p>
+                <h1 class="animate-entry delay-1 headingText">Senior advisory support for security and operations—built to be implemented.</h1>
+                <p class="animate-entry delay-2 paragraphText">TriGrove provides practical cybersecurity advisory and operations guidance. Engage a curated network of independent specialists for outcome-driven work: roadmaps, readiness, reporting, and execution support.</p>
 
-                <div class="animate-entry delay-3" style="display: flex; gap: 1rem; margin-bottom: 2.5rem;">
+                <div class="hero-buttons animate-entry delay-3" style="display: flex; gap: 1rem; margin-bottom: 2.5rem;">
                     <a href="{{ '/contact/' | url }}" class="btn btn-primary">Request a consult</a>
                     <a href="{{ '/services/' | url }}" class="btn btn-secondary">Explore services</a>
                 </div>
