@@ -1100,6 +1100,43 @@ select.form-input {
     line-height: 1.3 !important;
     margin-bottom: 1rem !important;
     /* Mobile (Portrait) */
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .hero-text {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 1rem !important;
+    /* Minimal padding */
+  }
+
+  .hero-main {
+    width: 100% !important;
+    padding: 30px 15px !important;
+    margin: 0 !important;
+  }
+
+  .main-container {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .hero-content {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .hero-text p {
+    font-size: 1rem !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .hero-text h1 {
+    text-align: center !important;
   }
 
   .section-header {
