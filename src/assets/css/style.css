@@ -906,6 +906,7 @@ select.form-input {
     /* Ensure above everything */
   }
 
+
   /* When menu is open, hamburger should be fixed to stay visible */
   .hamburger.active {
     position: fixed;
@@ -1158,6 +1159,43 @@ select.form-input {
   .section-header h2 {
     font-size: 1.5rem;
     text-align: center !important;
+  }
+
+  /* Reduce section padding on mobile */
+  .section-white,
+  .section-light,
+  .advisors-section,
+  .approach-section {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .contact-section {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .contact-section .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .contact-subtitle {
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .typical-engagements-box {
+    text-align: left !important;
+  }
+
+  .typical-engagements-box h3,
+  .typical-engagements-box ul,
+  .typical-engagements-box li {
+    text-align: left !important;
+    align-items: flex-start !important;
+    width: 100% !important;
   }
 
   .section-header p {
