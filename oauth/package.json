@@ -1,0 +1,10 @@
+{
+    "name": "decap-pro-oauth",
+    "version": "1.0.0",
+    "dependencies": {
+        "simple-oauth2": "^5.0.0"
+    },
+    "scripts": {
+        "start": "node index.js"
+    }
+}
