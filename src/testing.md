@@ -2,7 +2,7 @@
 layout: base.njk
 title: Testing
 eleventyNavigation:
-  order: 5
+  order: 6
   key: Testing
 ---
 
