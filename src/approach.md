@@ -1,6 +1,9 @@
 ---
 layout: base.njk
 title: Approach
+eleventyNavigation:
+  key: Approach
+  order: 4
 ---
 
 <!-- Watermark Logo -->

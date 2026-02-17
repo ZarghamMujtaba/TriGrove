@@ -1,6 +1,9 @@
 ---
 layout: base.njk
 title: Advisors
+eleventyNavigation:
+  key: Advisors
+  order: 3
 ---
 
 <!-- Watermark Logo -->
@@ -41,7 +44,7 @@ title: Advisors
 
 <!-- Advisors Grid -->
 <div class="advisors-grid">
-{% for advisor in advisors %}
+{% for advisor in advisors.advisors %}
 <div class="advisor-card" data-specialty="{{ advisor.specialty_line | lower }}">
 <div class="card-header">
 <div class="avatar">{{ advisor.initials }}</div>

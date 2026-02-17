@@ -1,13 +1,16 @@
 ---
 layout: base.njk
 title: Contact
+eleventyNavigation:
+  key: Request a consult
+  order: 5
 ---
 
 <!-- Watermark Logo -->
 <img src="{{ '/assets/logo-mark.svg' | url }}" class="bg-logo-watermark" alt="" aria-hidden="true">
 
 <section class="section-light contact-section">
-    <div class="container" style="padding: 0rem 0;">
+    <div class="container" style="padding: 1rem 0;">
         <!-- Page Header -->
         <div style="text-align: center; margin-bottom: 2rem;">
             <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.75rem;">Contact</h1>

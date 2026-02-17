@@ -1,0 +1,76 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+# local_backend: true
+
+media_folder: "src/assets/images/uploads" # Media files will be stored in the repo under src/assets/images/uploads
+public_folder: "/assets/images/uploads" # The src attribute for uploaded media will begin with /assets/images/uploads
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "src"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Menu Settings"
+        name: "eleventyNavigation"
+        widget: "object"
+        fields:
+          - {label: "Menu Label", name: "key", widget: "string", required: true, hint: "Text to show in the menu"}
+          - {label: "Order", name: "order", widget: "number", default: 0, required: false, value_type: "int"}
+          - {label: "Parent", name: "parent", widget: "string", required: false, hint: "Parent menu item specific key"}
+    extension: "md"
+    format: "frontmatter"
+
+  - name: "advisors"
+    label: "Advisors"
+    files:
+      - name: "advisors"
+        label: "Advisors List"
+        file: "src/_data/advisors.json"
+        description: "Manage Advisors list"
+        fields:
+          - label: "Advisors"
+            name: "advisors"
+            widget: "list"
+            fields:
+              - {label: "Initials", name: "initials", widget: "string"}
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Specialty Line", name: "specialty_line", widget: "string"}
+              - {label: "Bio", name: "bio", widget: "text"}
+              - {label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}}
+              - {label: "Filter Category", name: "filter_category", widget: "select", options: ["grc", "security", "incident", "operations"]}
+              - {label: "Related Services Link", name: "related_services_link", widget: "string"}
+
+  - name: "services"
+    label: "Services"
+    files:
+      - name: "services"
+        label: "Services Content"
+        file: "src/_data/services.json"
+        description: "Manage Services content"
+        fields:
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            fields:
+              - {label: "ID", name: "id", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Homepage Description", name: "homepage_description", widget: "string", required: false}
+              - {label: "Section Class", name: "section_class", widget: "string"}
+              - {label: "Grid Class", name: "grid_class", widget: "string"}
+              - label: "Services List"
+                name: "services"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Who For", name: "who_for", widget: "string"}
+                  - {label: "Deliverables", name: "deliverables", widget: "list", field: {label: "Item", name: "item", widget: "string"}}
+                  - {label: "Contact Topic", name: "contact_topic", widget: "string"}
+                  - {label: "Button Text", name: "button_text", widget: "string"}

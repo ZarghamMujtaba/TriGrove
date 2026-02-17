@@ -12,11 +12,38 @@
         </button>
         <nav class="main-nav">
             <ul>
-                <li><a href="{{ '/' | url }}" class="nav-link {{ 'active' if page.url == '/' }}">Home</a></li>
-                <li><a href="{{ '/services/' | url }}" class="nav-link {{ 'active' if '/services/' in page.url }}">Services</a></li>
-                <li><a href="{{ '/advisors/' | url }}" class="nav-link {{ 'active' if '/advisors/' in page.url }}">Advisors</a></li>
-                <li><a href="{{ '/approach/' | url }}" class="nav-link {{ 'active' if '/approach/' in page.url }}">Approach</a></li>
-                <li><a href="{{ '/contact/' | url }}" class="btn btn-primary">Request a consult</a></li>
+                {%- for entry in collections.all | eleventyNavigation %}
+                <li>
+                    {%- if entry.children.length -%}
+                    <div class="dropdown">
+                        <a href="{{ entry.url | url }}" class="nav-link dropdown-toggle {{ 'active' if entry.url == page.url }}" aria-expanded="false">
+                            {{ entry.title }}
+                            <svg class="dropdown-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{ entry.url | url }}" class="dropdown-item">
+                                    All {{ entry.title }}
+                                </a>
+                            </li>
+                            {%- for child in entry.children %}
+                            <li>
+                                <a href="{{ child.url | url }}" class="dropdown-item {{ 'active' if child.url == page.url }}">
+                                    {{ child.title }}
+                                </a>
+                            </li>
+                            {%- endfor %}
+                        </ul>
+                    </div>
+                    {%- else -%}
+                    <a href="{{ entry.url | url }}" class="{{ 'btn btn-primary' if entry.key == 'Request a consult' else 'nav-link' }} {{ 'active' if entry.url == page.url }}">
+                        {{ entry.title }}
+                    </a>
+                    {%- endif -%}
+                </li>
+                {%- endfor %}
             </ul>
         </nav>
     </div>
@@ -34,6 +61,20 @@
                 hamburger.classList.toggle('active');
                 nav.classList.toggle('nav-open');
                 document.body.classList.toggle('no-scroll');
+            });
+
+            // Mobile dropdown toggle
+            const dropdowns = nav.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
+                const toggle = dropdown.querySelector('.dropdown-toggle');
+                toggle.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+                        toggle.setAttribute('aria-expanded', !isExpanded);
+                    }
+                });
             });
 
             // Close menu when clicking a link

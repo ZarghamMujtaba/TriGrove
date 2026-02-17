@@ -1,6 +1,9 @@
 ---
 layout: base.njk
 title: Services
+eleventyNavigation:
+  key: Services
+  order: 2
 ---
 
 <!-- Watermark Logo -->

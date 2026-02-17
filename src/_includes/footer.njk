@@ -19,10 +19,12 @@
             <ul class="footer-nav-list">
                 <!-- Main Navigation -->
                 <li class="footer-links">
-                    <a href="{{ '/services/' | url }}">Services</a>
-                    <a href="{{ '/advisors/' | url }}">Advisors</a>
-                    <a href="{{ '/approach/' | url }}">Approach</a>
-                    <a href="{{ '/contact/' | url }}">Contact</a>
+                    {%- for entry in collections.all | eleventyNavigation %}
+                    {%- if entry.key != 'Home' and entry.key != 'Request a consult' %}
+                    <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+                    {%- endif %}
+                    {%- endfor %}
+                    <a href="{{ '/contact/' | url }}" >Contact</a>
                 </li>
                 <!-- Legal Links -->
                 <li class="footer-legal-links">
