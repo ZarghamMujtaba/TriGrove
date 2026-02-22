@@ -16,6 +16,8 @@ collections:
     folder: "src"
     create: true
     slug: "{{slug}}"
+    editor:
+      preview: false
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
       - {label: "Title", name: "title", widget: "string"}

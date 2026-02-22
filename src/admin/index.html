@@ -1,11 +1,13 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
+
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
@@ -18,6 +20,110 @@
         }, 1000); // 1s optional delay for visual completion
       },
     });
+
+    // Advisors Preview
+    var AdvisorsPreview = createClass({
+      render: function () {
+        var entry = this.props.entry;
+        var name = entry.getIn(['data', 'name']);
+        var nameStr = name ? name.toString() : '';
+        var initials = nameStr.split(' ').map(function (n) { return n ? n[0] : ''; }).join('').toUpperCase().substring(0, 2);
+
+        var specialty_line = entry.getIn(['data', 'specialty_line']);
+        var specialtyText = specialty_line ? specialty_line.toJS().join(' • ') : '';
+
+        var bio = entry.getIn(['data', 'bio']);
+        var tags = entry.getIn(['data', 'tags']);
+
+        var tagsElements = tags ? tags.toJS().map(function (tag, index) {
+          return h('span', { className: 'tag', key: index }, tag);
+        }) : null;
+
+        return h('section', { className: 'advisors-section', style: { padding: '2rem', minHeight: 'auto' } },
+          h('div', { className: 'container' },
+            h('div', { className: 'advisors-grid' },
+              h('div', { className: 'advisor-card' },
+                h('div', { className: 'card-header' },
+                  h('div', { className: 'avatar' }, initials),
+                  h('div', { className: 'advisor-info' },
+                    h('h3', {}, nameStr),
+                    h('p', { className: 'specialty' }, specialtyText)
+                  )
+                ),
+                h('p', { className: 'bio' }, bio),
+                h('div', { className: 'tags' }, tagsElements),
+                h('a', { className: 'btn-consult', href: '#' }, 'Request consult'),
+                h('a', { className: 'related-services', href: '#' }, 'Related services')
+              )
+            )
+          )
+        );
+      }
+    });
+
+    CMS.registerPreviewTemplate("advisors", AdvisorsPreview);
+
+    // Services Preview
+    var ServicesPreview = createClass({
+      render: function () {
+        var entry = this.props.entry;
+        var title = entry.getIn(['data', 'title']);
+        var description = entry.getIn(['data', 'description']);
+        var servicesList = entry.getIn(['data', 'services']);
+
+        var servicesElements = [];
+        var gridClass = "grid-2";
+        if (servicesList && servicesList.size > 0) {
+          if (servicesList.size === 3) gridClass = "grid-3";
+          else if (servicesList.size === 4) gridClass = "grid-4";
+
+          servicesList.forEach(function (service, index) {
+            var serviceTitle = service.get('title');
+            var whoFor = service.get('who_for');
+            var deliverables = service.get('deliverables');
+            var buttonText = service.get('button_text');
+
+            var deliverablesElements = [];
+            if (deliverables) {
+              deliverables.forEach(function (deliv, dIndex) {
+                deliverablesElements.push(h('li', { key: dIndex }, deliv));
+              });
+            }
+
+            servicesElements.push(
+              h('div', { className: 'service-card', key: index },
+                h('h3', {}, serviceTitle),
+                h('div', { className: 'service-meta' },
+                  h('strong', {}, "Who it's for: "),
+                  whoFor
+                ),
+                h('ul', { className: 'check-list' }, deliverablesElements),
+                h('div', { style: { marginTop: 'auto' } },
+                  h('a', { className: 'btn btn-primary btn-sm' }, buttonText)
+                )
+              )
+            );
+          });
+        }
+
+        return h('section', { className: 'section-white', style: { padding: '2rem' } },
+          h('div', { className: 'container' },
+            h('div', { className: 'service-section' },
+              h('h2', {}, title),
+              h('p', {}, description),
+              h('div', { className: 'grid ' + gridClass }, servicesElements)
+            )
+          )
+        );
+      }
+    });
+
+    CMS.registerPreviewTemplate("services", ServicesPreview);
+    CMS.registerPreviewStyle("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+    CMS.registerPreviewStyle("/assets/css/style.css");
+    CMS.registerPreviewStyle("/TriGrove/assets/css/style.css");
+    CMS.registerPreviewStyle("../assets/css/style.css");
   </script>
 </body>
+
 </html>
