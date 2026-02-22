@@ -1,0 +1,14 @@
+{
+  "initials": "IR",
+  "name": "Advisor (Sample)",
+  "specialty_line": [
+    "Incident Response • Tabletop • Recovery"
+  ],
+  "bio": "Incident readiness exercises and recovery validation for high-impact scenarios.",
+  "tags": [
+    "IR",
+    "Tabletop"
+  ],
+  "filter_category": "incident",
+  "related_services_link": "/services/#incident-readiness"
+}

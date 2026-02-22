@@ -9,5 +9,15 @@
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.registerEventListener({
+      name: 'postSave',
+      handler: () => {
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000); // 1s optional delay for visual completion
+      },
+    });
+  </script>
 </body>
 </html>

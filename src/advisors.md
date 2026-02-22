@@ -44,13 +44,17 @@ eleventyNavigation:
 
 <!-- Advisors Grid -->
 <div class="advisors-grid">
-{% for advisor in advisors.advisors %}
-<div class="advisor-card" data-specialty="{{ advisor.specialty_line | lower }}">
+{% for advisor in collections.advisors %}
+{% set specialty_text = "" %}
+{% if advisor.specialty_line %}
+{% set specialty_text = advisor.specialty_line | join(" • ") %}
+{% endif %}
+<div class="advisor-card" data-specialty="{{ specialty_text | lower }}">
 <div class="card-header">
-<div class="avatar">{{ advisor.initials }}</div>
+<div class="avatar">{{ advisor.name | initials }}</div>
 <div class="advisor-info">
 <h3>{{ advisor.name }}</h3>
-<p class="specialty">{{ advisor.specialty_line }}</p>
+<p class="specialty">{{ specialty_text }}</p>
 </div>
 </div>
 <p class="bio">{{ advisor.bio }}</p>
@@ -58,7 +62,19 @@ eleventyNavigation:
 {% for tag in advisor.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
 </div>
 <a href="{{ '/contact/' | url }}" class="btn-consult">Request consult</a>
-<a href="{{ advisor.related_services_link | url }}" class="related-services">Related services</a>
+{% set service_link = "" %}
+{% if advisor.filter_category == 'grc' %}
+  {% set service_link = "/services/#grc" %}
+{% elif advisor.filter_category == 'security' %}
+  {% set service_link = "/services/#assessments" %}
+{% elif advisor.filter_category == 'incident' %}
+  {% set service_link = "/services/#incident-readiness" %}
+{% elif advisor.filter_category == 'operations' %}
+  {% set service_link = "/services/#operations-advisory" %}
+{% else %}
+  {% set service_link = "/services/#strategic-advisory" %}
+{% endif %}
+<a href="{{ service_link | url }}" class="related-services">Related services</a>
 </div>
 {% endfor %}
 </div>

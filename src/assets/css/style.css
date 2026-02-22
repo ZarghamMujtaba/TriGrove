@@ -555,11 +555,11 @@ img {
 }
 
 .check-list li::before {
-  content: 'âœ“';
+  content: '✓';
   position: absolute;
   left: 0;
   top: 0;
-  color: var(--color-brand-primary);
+  color: #10b981;
   font-weight: 700;
   font-size: 0.8rem;
 }
@@ -1743,7 +1743,7 @@ select.form-input {
 }
 
 .checklist li::before {
-  content: 'âœ“';
+  content: '✓';
   position: absolute;
   left: 0;
   top: 0;

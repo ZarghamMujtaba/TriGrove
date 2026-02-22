@@ -1,0 +1,32 @@
+{
+  "id": "strategic-advisory",
+  "title": "Strategic advisory",
+  "description": "Senior leadership and decision support when you need steady guidance.",
+  "section_class": "section-white",
+  "delay": "4",
+  "grid_class": "grid-2",
+  "services": [
+    {
+      "title": "vCISO retainer",
+      "who_for": "organizations needing ongoing security leadership and program management.",
+      "deliverables": [
+        "Roadmap ownership + sequencing",
+        "Executive comms and decision support",
+        "Advisor matching as needed"
+      ],
+      "contact_topic": "vCISO Retainer",
+      "button_text": "Discuss"
+    },
+    {
+      "title": "Vendor risk (TPRM)",
+      "who_for": "teams building or improving third-party risk management programs.",
+      "deliverables": [
+        "Review templates and scoring",
+        "SOC report interpretation support",
+        "Program design + cadence"
+      ],
+      "contact_topic": "Vendor Risk",
+      "button_text": "Discuss"
+    }
+  ]
+}

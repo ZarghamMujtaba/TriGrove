@@ -1,0 +1,32 @@
+{
+  "id": "incident-readiness",
+  "title": "Incident readiness",
+  "description": "Prepare for high-impact events with tested response paths and fewer assumptions.",
+  "section_class": "section-light",
+  "delay": "3",
+  "grid_class": "grid-2",
+  "services": [
+    {
+      "title": "Incident response plan + tabletop",
+      "who_for": "teams that need tested response procedures for security incidents.",
+      "deliverables": [
+        "Scenario design and facilitation",
+        "Runbook and comms improvements",
+        "After action plan"
+      ],
+      "contact_topic": "Incident Response",
+      "button_text": "Discuss"
+    },
+    {
+      "title": "Recovery readiness validation",
+      "who_for": "organizations validating business continuity and disaster recovery capabilities.",
+      "deliverables": [
+        "Backup/restore assumptions review",
+        "Recovery workflow testing plan",
+        "Risk reduction recommendations"
+      ],
+      "contact_topic": "Recovery Readiness",
+      "button_text": "Discuss"
+    }
+  ]
+}

@@ -19,7 +19,7 @@ eleventyNavigation:
         </div>
 
         <div class="grid grid-3">
-{%- set featuredCategories = [services.categories[0], services.categories[1], services.categories[4]] -%}
+{%- set featuredCategories = [collections.services[0], collections.services[1], collections.services[4]] -%}
 {%- for category in featuredCategories -%}
             <div class="card">
                 <h3>{{ category.homepage_title | default(category.title) }}</h3>

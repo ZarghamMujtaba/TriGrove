@@ -1,0 +1,17 @@
+{
+  "initials": "AR",
+  "name": "Advisor (Sample)",
+  "specialty_line": [
+    "GRC",
+    "SOC 2",
+    "ISO 27001"
+  ],
+  "bio": "Senior compliance and controls advisor focused on evidence-ready programs.",
+  "tags": [
+    "GRC",
+    "SOC2",
+    "ISO"
+  ],
+  "filter_category": "grc",
+  "related_services_link": "/services/#grc"
+}

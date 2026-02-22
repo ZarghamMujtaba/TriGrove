@@ -33,14 +33,21 @@ eleventyNavigation:
     </div>
 </section>
 
-{% for category in services.categories -%}
+{% for category in collections.services -%}
 <!-- {{ category.title }} -->
-<section id="{{ category.id }}" class="{{ category.section_class }}">
+{% set section_class = "section-white" if loop.index0 % 2 == 0 else "section-light" %}
+<section id="{{ category.id }}" class="{{ section_class }}">
     <div class="container">
-        <div class="service-section animate-entry delay-{{ category.delay }}"{% if category.id != 'operations-advisory' %} style="margin-bottom: 0;"{% endif %}> 
+        <div class="service-section animate-entry delay-{{ loop.index }}"{% if category.id != 'operations-advisory' %} style="margin-bottom: 0;"{% endif %}> 
             <h2>{{ category.title }}</h2>
             <p>{{ category.description }}</p>
-            <div class="grid {{ category.grid_class }}">
+            {% set grid_class = "grid-2" %}
+            {% if category.services | length == 3 %}
+                {% set grid_class = "grid-3" %}
+            {% elif category.services | length == 4 %}
+                {% set grid_class = "grid-4" %}
+            {% endif %}
+            <div class="grid {{ grid_class }}">
 {%- for service in category.services -%}
                 <div class="service-card">
                     <h3>{{ service.title }}</h3>

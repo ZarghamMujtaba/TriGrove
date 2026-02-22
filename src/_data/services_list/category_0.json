@@ -1,0 +1,33 @@
+{
+  "id": "assessments",
+  "title": "Assessments & roadmaps",
+  "description": "Baseline your posture and leave with a prioritized plan your team can execute.",
+  "homepage_description": "Know where you stand and what to do next. Prioritized and scoped to your team.",
+  "section_class": "section-light",
+  "delay": "1",
+  "grid_class": "grid-2",
+  "services": [
+    {
+      "title": "Security assessment + roadmap",
+      "who_for": "teams that need clarity and prioritization.",
+      "deliverables": [
+        "Posture summary and top risks",
+        "Prioritized roadmap with owners",
+        "Executive-ready brief deck"
+      ],
+      "contact_topic": "Security Assessment",
+      "button_text": "Discuss this service"
+    },
+    {
+      "title": "Architecture review",
+      "who_for": "cloud-first teams validating security design choices.",
+      "deliverables": [
+        "Threat model and key control gaps",
+        "IAM and access model recommendations",
+        "Implementation sequencing"
+      ],
+      "contact_topic": "Architecture Review",
+      "button_text": "Discuss this service"
+    }
+  ]
+}

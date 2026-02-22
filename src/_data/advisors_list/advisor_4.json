@@ -1,0 +1,14 @@
+{
+  "initials": "OP",
+  "name": "Advisor (Sample)",
+  "specialty_line": [
+    "Operations • Reporting • Process"
+  ],
+  "bio": "Operational cadence and reporting support for small teams (close, AP/AR, KPIs).",
+  "tags": [
+    "Ops",
+    "Reporting"
+  ],
+  "filter_category": "operations",
+  "related_services_link": "/services/#operations-advisory"
+}

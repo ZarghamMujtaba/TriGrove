@@ -1,0 +1,45 @@
+{
+  "id": "operations-advisory",
+  "title": "Operations advisory (bookkeeping & accounting management)",
+  "homepage_title": "Operations advisory",
+  "description": "Practical support to keep monthly financial operations clean, consistent, and decision-ready. Services are operational consulting and coordination.",
+  "homepage_description": "Bookkeeping workflow, close cadence, AP/AR support, and management reporting.",
+  "section_class": "section-light",
+  "delay": "5",
+  "grid_class": "grid-3",
+  "services": [
+    {
+      "title": "Bookkeeping oversight & close workflow",
+      "who_for": "small teams that need a consistent monthly close.",
+      "deliverables": [
+        "Monthly close checklist + cadence",
+        "Reconciliation process (bank/credit)",
+        "Categorization guidelines + documentation standards"
+      ],
+      "contact_topic": "Bookkeeping Oversight",
+      "button_text": "Discuss"
+    },
+    {
+      "title": "AP/AR process management",
+      "who_for": "teams that want cleaner billing and cash collection.",
+      "deliverables": [
+        "Invoice workflow + follow-up cadence",
+        "Vendor bill intake and approvals",
+        "Aging summaries and status reporting"
+      ],
+      "contact_topic": "AP/AR Process",
+      "button_text": "Discuss"
+    },
+    {
+      "title": "Management reporting & KPI setup",
+      "who_for": "operators who need better visibility month to month.",
+      "deliverables": [
+        "Monthly reporting pack (P&L / balance sheet / cash)",
+        "Budget vs actual tracking",
+        "Variance notes and decision support"
+      ],
+      "contact_topic": "Management Reporting",
+      "button_text": "Discuss"
+    }
+  ]
+}

@@ -53,7 +53,7 @@ eleventyNavigation:
                             <label for="topic" class="form-label">What do you need help with?</label>
                             <select id="topic" name="topic" class="form-input">
                                 <option value="">Select one...</option>
-{%- for category in services.categories -%}
+{%- for category in collections.services -%}
 {%- for service in category.services %}
                                 <option value="{{ service.contact_topic }}">{{ service.title }}</option>
 {%- endfor -%}

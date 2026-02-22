@@ -1,0 +1,16 @@
+{
+  "initials": "CS",
+  "name": "Advisor (Sample)",
+  "specialty_line": [
+    "Cloud",
+    "Architecture",
+    "IAM"
+  ],
+  "bio": "Cloud security architecture reviews with practical sequencing for teams.",
+  "tags": [
+    "Cloud",
+    "Architecture"
+  ],
+  "filter_category": "security",
+  "related_services_link": "/services/#assessments"
+}

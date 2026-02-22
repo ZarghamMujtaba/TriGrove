@@ -32,48 +32,46 @@ collections:
 
   - name: "advisors"
     label: "Advisors"
-    files:
-      - name: "advisors"
-        label: "Advisors List"
-        file: "src/_data/advisors.json"
-        description: "Manage Advisors list"
-        fields:
-          - label: "Advisors"
-            name: "advisors"
-            widget: "list"
-            fields:
-              - {label: "Initials", name: "initials", widget: "string"}
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Specialty Line", name: "specialty_line", widget: "string"}
-              - {label: "Bio", name: "bio", widget: "text"}
-              - {label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}}
-              - {label: "Filter Category", name: "filter_category", widget: "select", options: ["grc", "security", "incident", "operations"]}
-              - {label: "Related Services Link", name: "related_services_link", widget: "string"}
+    folder: "src/_data/advisors_list"
+    create: true
+    extension: "json"
+    format: "json"
+    identifier_field: "name"
+    summary: "{{name}} ({{specialty_line}})"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Initials", name: "initials", widget: "hidden", required: false}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Specialty Line", name: "specialty_line", widget: "list", field: {label: "Item", name: "item", widget: "string"}, default: [], required: false}
+      - {label: "Bio", name: "bio", widget: "text"}
+      - {label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}, default: [], required: false}
+      - {label: "Filter Category", name: "filter_category", widget: "select", options: ["grc", "security", "incident", "operations"]}
+      - {label: "Related Services Link", name: "related_services_link", widget: "hidden", required: false}
 
   - name: "services"
     label: "Services"
-    files:
-      - name: "services"
-        label: "Services Content"
-        file: "src/_data/services.json"
-        description: "Manage Services content"
+    folder: "src/_data/services_list"
+    create: true
+    extension: "json"
+    format: "json"
+    identifier_field: "title"
+    summary: "{{title}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "ID", name: "id", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Homepage Description", name: "homepage_description", widget: "string", required: false}
+      - {label: "Section Class", name: "section_class", widget: "hidden", required: false}
+      - {label: "Grid Class", name: "grid_class", widget: "hidden", required: false}
+      - label: "Services List"
+        name: "services"
+        widget: "list"
+        default: []
+        required: false
         fields:
-          - label: "Categories"
-            name: "categories"
-            widget: "list"
-            fields:
-              - {label: "ID", name: "id", widget: "string"}
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Description", name: "description", widget: "text"}
-              - {label: "Homepage Description", name: "homepage_description", widget: "string", required: false}
-              - {label: "Section Class", name: "section_class", widget: "string"}
-              - {label: "Grid Class", name: "grid_class", widget: "string"}
-              - label: "Services List"
-                name: "services"
-                widget: "list"
-                fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Who For", name: "who_for", widget: "string"}
-                  - {label: "Deliverables", name: "deliverables", widget: "list", field: {label: "Item", name: "item", widget: "string"}}
-                  - {label: "Contact Topic", name: "contact_topic", widget: "string"}
-                  - {label: "Button Text", name: "button_text", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Who For", name: "who_for", widget: "string"}
+          - {label: "Deliverables", name: "deliverables", widget: "list", field: {label: "Item", name: "item", widget: "string"}, default: [], required: false}
+          - {label: "Contact Topic", name: "contact_topic", widget: "string"}
+          - {label: "Button Text", name: "button_text", widget: "string"}
