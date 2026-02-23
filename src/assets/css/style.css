@@ -559,7 +559,7 @@ img {
   position: absolute;
   left: 0;
   top: 0;
-  color: #10b981;
+  color: var(--color-brand-primary);
   font-weight: 700;
   font-size: 0.8rem;
 }
@@ -1747,7 +1747,7 @@ select.form-input {
   position: absolute;
   left: 0;
   top: 0;
-  color: #10b981;
+  color: var(--color-brand-primary);
   /* Green checkmark */
   font-weight: 700;
   font-size: 1rem;
